@@ -12,7 +12,6 @@ public class H2Db {
 
         try{
             connection = DriverManager.getConnection(databaseURL);
-            Statement statement = connection.createStatement();
         } catch (SQLException e){
             e.fillInStackTrace();
         }
@@ -31,6 +30,18 @@ public class H2Db {
             return statement.executeUpdate(query);
         }catch (SQLException e){
             throw new RuntimeException("Error while running query");
+        }
+    }
+
+    public void processResultSet(ResultSet resultSet) {
+        try {
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                int durationMonths = resultSet.getInt("duration_months");
+                System.out.println(id + "\n" + durationMonths);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Error while processing ResultSet", e);
         }
     }
 

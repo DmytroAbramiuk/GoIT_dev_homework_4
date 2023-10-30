@@ -18,7 +18,7 @@ CREATE TABLE projects (
 	finish_date DATE
 );
 
-CREATE TABLE projects
+ALTER TABLE projects
 ADD CONSTRAINT client_id_fk
 FOREIGN KEY (client_id) REFERENCES clients(id)
 ON DELETE CASCADE;
