@@ -1,7 +1,7 @@
 package org.example;
 
 import org.example.Tasks.DatabaseQueryService;
-import org.example.clients.*;
+import org.example.response.*;
 
 import java.sql.SQLException;
 

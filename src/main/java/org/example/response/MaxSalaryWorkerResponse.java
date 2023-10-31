@@ -1,4 +1,4 @@
-package org.example.clients;
+package org.example.response;
 
 public class MaxSalaryWorkerResponse {
     private final String name;

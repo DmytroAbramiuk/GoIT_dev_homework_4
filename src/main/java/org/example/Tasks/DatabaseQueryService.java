@@ -2,7 +2,7 @@ package org.example.Tasks;
 
 import org.example.config.H2Db;
 import org.example.query.QueryReader;
-import org.example.clients.*;
+import org.example.response.*;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
