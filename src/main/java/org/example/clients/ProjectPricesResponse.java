@@ -1,6 +1,4 @@
-package org.example.response;
-
-import java.util.Objects;
+package org.example.clients;
 
 public class ProjectPricesResponse {
     int projectId;

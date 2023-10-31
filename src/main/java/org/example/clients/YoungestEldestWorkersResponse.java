@@ -1,4 +1,4 @@
-package org.example.response;
+package org.example.clients;
 
 import java.sql.Date;
 

@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.Tasks.DatabaseQueryService;
+import org.example.clients.*;
 
 import java.sql.SQLException;
 
@@ -8,14 +9,24 @@ import java.sql.SQLException;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
-        DatabaseQueryService.getLongestProject();
+        for(LongestProjectResponse response : DatabaseQueryService.getLongestProject()){
+            System.out.println(response);
+        }
         System.out.println("====================");
-        DatabaseQueryService.getMaxProjectsClient();
+        for(MaxProjectsClientResponse response : DatabaseQueryService.getMaxProjectsClient()){
+            System.out.println(response);
+        }
         System.out.println("====================");
-        DatabaseQueryService.getMaxSalaryWorker();
+        for(MaxSalaryWorkerResponse response : DatabaseQueryService.getMaxSalaryWorker()){
+            System.out.println(response);
+        }
         System.out.println("====================");
-        DatabaseQueryService.getYoungestEldestWorkers();
+        for(YoungestEldestWorkersResponse response : DatabaseQueryService.getYoungestEldestWorkers()){
+            System.out.println(response);
+        }
         System.out.println("====================");
-        DatabaseQueryService.getProjectPrices();
+        for(ProjectPricesResponse response : DatabaseQueryService.getProjectPrices()){
+            System.out.println(response);
+        }
     }
 }

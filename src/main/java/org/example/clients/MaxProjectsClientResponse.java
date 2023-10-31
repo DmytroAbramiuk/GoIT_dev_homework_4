@@ -1,4 +1,4 @@
-package org.example.response;
+package org.example.clients;
 
 public class MaxProjectsClientResponse {
     private final String name;
